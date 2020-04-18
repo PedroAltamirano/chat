@@ -19,7 +19,7 @@ def send(event=None):
   msg = my_msg.get()
   my_msg.set('')
   server.send(msg.encode())
-  msg_list.insert(tkinter.END, 'Me > '+my_msg)
+  msg_list.insert(tkinter.END, 'Me > '+msg)
 
 def receive():
   while True:
