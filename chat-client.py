@@ -31,7 +31,6 @@ def receive():
     msg_list.insert(tkinter.END, message)
 
 def on_closing(event=None):
-  """This function is to be called when the window is closed."""
   my_msg.set("[bye]")
   send()
 
@@ -57,8 +56,5 @@ send_button.pack()
 
 top.protocol("WM_DELETE_WINDOW", on_closing)
 
-thread_send = threading.Thread(target = send)
-thread_send.start()
-
-thread_receive = threading.Thread(target = receive)
-thread_receive.start()
+thread_receive = threading.Thread(target = receive).start()
+tkinter.mainloop()
