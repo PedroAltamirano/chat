@@ -16,7 +16,6 @@ def receive():
   while True:
     message = server.recv(1024)
     print(message.decode())
-    send()
 
 thread_send = threading.Thread(target = send)
 thread_send.start()
