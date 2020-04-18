@@ -26,7 +26,6 @@ def receive():
     try:
       message = server.recv(1024)
       #print('\n'+message.decode()) #print on terminal
-      v
       if message.decode() == '[bye]':
         server.close()
         top.quit()
