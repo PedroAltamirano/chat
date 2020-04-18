@@ -30,6 +30,7 @@ def receive():
         server.close()
         top.quit()
         sys.exit()
+      msg_list.insert(tkinter.END, message.decode()) #add message to listbox
     except OSError:
       break
 
