@@ -3,12 +3,12 @@ import threading
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.connect(('192.168.0.19', 4000))
-print("Connected to host: " + ip_address)
+print("Connected to host: 192.168.0.19")
 
 def send():
   while True:
-    msg = raw_input('\nMe > ')
-    server.send(msg)
+    msg = str(input('\nMe > '))
+    server.send(msg.encode())
 
 def receive():
   while True:
