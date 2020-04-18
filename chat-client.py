@@ -18,7 +18,7 @@ def send(event=None):
   while True:
     #msg = str(input('Me > ')) #get from terminal
     msg = my_msg.get()
-    my_msg.set('')
+    my_msg.set("")
     server.send(msg.encode())
     if msg == '[bye]':
       server.close()
